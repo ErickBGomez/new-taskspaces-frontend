@@ -21,7 +21,7 @@ export default function FieldsSection() {
           </div>
           <div className="fields-container-info">
             <div className="fields-img">
-              <img src="src\assets\fields_landing.svg" />
+              <img src="/images/fields_landing.svg" />
             </div>
             <div className="fields-content">
               <Tabs>

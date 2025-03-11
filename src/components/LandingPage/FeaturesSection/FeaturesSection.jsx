@@ -41,7 +41,7 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                   <div className="tab-container-img">
-                    <img src="src\assets\feature_workspace.svg" />
+                    <img src="/images/feature_workspace.svg" />
                   </div>
                 </div>
               </Tabs.TabPane>
@@ -63,7 +63,7 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                   <div className="tab-container-img">
-                    <img src="src\assets\feature_projects.svg" />
+                    <img src="/images/feature_projects.svg" />
                   </div>
                 </div>
               </Tabs.TabPane>
@@ -85,7 +85,7 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                   <div className="tab-container-img">
-                    <img src="src\assets\feature_tasks.svg" />
+                    <img src="/images/feature_tasks.svg" />
                   </div>
                 </div>
               </Tabs.TabPane>
@@ -106,7 +106,7 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                   <div className="tab-container-img">
-                    <img src="src\assets\feature_timer.svg" />
+                    <img src="/images/feature_timer.svg" />
                   </div>
                 </div>
               </Tabs.TabPane>
@@ -128,7 +128,7 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                   <div className="tab-container-img">
-                    <img src="src\assets\feature_collaborate.svg" />
+                    <img src="/images/feature_collaborate.svg" />
                   </div>
                 </div>
               </Tabs.TabPane>

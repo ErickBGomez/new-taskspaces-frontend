@@ -5,9 +5,9 @@ import {
   AppleOutlined,
   RedditOutlined,
 } from '@ant-design/icons';
-import testimonial from '../../../../assets/testimonial1.jpg';
-import testimonial2 from '../../../../assets/testimonial2.jpg';
-import testimonial4 from '../../../../assets/testimonial4.jpg';
+import testimonial from '../../../../../public/images/testimonial1.jpg';
+import testimonial2 from '../../../../../public/images/testimonial2.jpg';
+import testimonial4 from '../../../../../public/images/testimonial4.jpg';
 import Paragraph from 'antd/es/typography/Paragraph';
 import Title from 'antd/es/typography/Title';
 

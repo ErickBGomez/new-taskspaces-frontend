@@ -30,7 +30,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="hero-image">
-            <img src="src\assets\hero_image.svg" />
+            <img src="/images/hero_image.svg" />
           </div>
         </div>
       </div>
