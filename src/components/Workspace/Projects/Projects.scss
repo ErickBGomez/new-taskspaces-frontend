@@ -1,0 +1,20 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.projects {
+  @include global.workspace-containers();
+  .projects-title {
+    @include global.workspace-titles();
+    .ant-typography {
+      @include global.workspace-titles();
+      margin-bottom: 0px;
+    }
+  }
+  .projects-carousel-main {
+    max-width: 750px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../../Global/Global.scss' as global;
+
+.comment-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .upper {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+
+    .username {
+      font-weight: 500;
+      color: global.$black-color;
+    }
+
+    .date-info {
+      display: flex;
+      align-items: end;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: global.$black-color_50;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.6rem;
+      color: global.$black-color_75;
+
+      * {
+        cursor: pointer;
+        transition: color 0.1s;
+      }
+
+      .edit:hover {
+        color: global.$primary-color;
+      }
+
+      .delete:hover {
+        color: global.$danger-color;
+      }
+    }
+  }
+}

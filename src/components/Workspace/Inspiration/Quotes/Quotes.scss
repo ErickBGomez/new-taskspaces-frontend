@@ -1,0 +1,23 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 750px;
+  width: 100%;
+  background-color: global.$black-color_5;
+  padding: 16px 4px;
+  border-radius: 16px;
+  border: 1px solid global.$black-color_50;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  .quotes-button {
+    display: flex;
+  }
+}

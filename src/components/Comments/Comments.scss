@@ -1,0 +1,5 @@
+@use '../Global/Global.scss' as global;
+
+.no-comments {
+  color: global.$black-color_50;
+}

@@ -1,0 +1,174 @@
+@use '../../Global/Global.scss' as global;
+
+$input-height: 40px;
+$button-height: 45px;
+$card-width: 700px;
+$padding: 2.5rem;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+* {
+  @include global.reset-styles;
+}
+
+.sysAdminAction-container {
+  @include global.workspace-containers();
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.sysAdminAction-card {
+  @include global.workspace-containers();
+  width: $card-width;
+  text-align: center;
+
+  .ant-divider {
+    border-top-color: global.$black-color;
+    border-top-width: 2px;
+    margin: 1rem 0;
+
+    .ant-divider-inner-text {
+      color: global.$black-color;
+      font-size: 16px !important;
+      font-weight: 400;
+    }
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .left-icon {
+      left: 0;
+      font-size: 1.25rem;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      .title {
+        text-align: center;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .titles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .buttons {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .create-upload {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .ant-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ant-typography {
+    margin-bottom: 0 !important;
+  }
+
+  .ant-form-item-has-error {
+    text-align: left;
+  }
+
+  .ant-tabs-tab-btn {
+    font-size: 16px !important;
+  }
+
+  .ant-divider-inner-text {
+    font-size: 16px !important;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .sysAdminAction-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .avatar-upload-container {
+    flex-direction: column;
+    gap: 10px;
+
+    .ant-avatar {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .top h3 {
+    font-size: 1.2rem;
+  }
+
+  .ant-form-item {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sysAdminAction-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .top {
+    flex-direction: column;
+
+    .center {
+      .title {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .avatar-upload-container {
+    gap: 10px;
+
+    .ant-avatar {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 1rem;
+  }
+
+  .ant-form-item:last-child {
+    margin-top: 1.5rem;
+  }
+
+  .ant-divider-inner-text {
+    font-size: 16px !important;
+  }
+}

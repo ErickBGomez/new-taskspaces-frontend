@@ -1,0 +1,49 @@
+@use '../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.footer {
+  @include global.flex-main(16px);
+  align-self: stretch;
+  background-color: global.$primary-color;
+  .footer-main {
+    width: 100%;
+    margin: 32px 0;
+    @include global.flex-main(16px);
+    .footer-nav {
+      .ant-typography {
+        padding: 0px 16px;
+        color: global.$white-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .footer-icons {
+      @include global.flex-main(16px, row);
+      margin-top: 8px;
+      svg {
+        fill: global.$white-color;
+        height: 44px;
+        width: 44px;
+      }
+    }
+  }
+  .footer-legal-links {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    @include global.container();
+    .ant-space {
+      @include global.nav-settings(32px);
+    }
+  }
+}

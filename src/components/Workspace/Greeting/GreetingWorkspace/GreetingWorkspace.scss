@@ -1,0 +1,29 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.greeting-workspace {
+  background-color: global.$white-color;
+  @include global.flex-main();
+  padding: 16px;
+  .greeting-workspace-text .ant-typography {
+    @include global.settings-title-general();
+    color: global.$black-color_75;
+  }
+  .greeting-workspace-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    .ant-typography {
+      margin-bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../Global/Global.scss' as global;
+
+.tag-manager {
+  .create-tag {
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .tags-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .tag-input-container {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

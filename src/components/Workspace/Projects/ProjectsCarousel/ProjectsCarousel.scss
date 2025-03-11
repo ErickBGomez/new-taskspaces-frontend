@@ -1,0 +1,44 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.projects-carousel {
+  background-color: global.$white-color;
+  @include global.flex-main(row);
+  .projects-carousel-container {
+    display: flex;
+    gap: 16px;
+    max-width: 750px;
+    width: 100%;
+    background-color: global.$black-color_5;
+    padding: 16px 4px;
+    border-radius: 16px;
+    border: 1px solid global.$black-color_50;
+    justify-content: space-between;
+    align-items: center;
+    .project-carousel-slide {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .project-carousel-add {
+        cursor: pointer;
+        @include global.flex-main();
+        .project-carousel-add-box {
+          border: 2px dashed global.$black-color_50;
+          border-radius: 8px;
+          padding: 40px;
+          background-color: transparent;
+          .anticon svg {
+            fill: global.$black-color_50;
+          }
+        }
+        .ant-typography {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

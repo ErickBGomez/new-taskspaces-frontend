@@ -1,0 +1,131 @@
+// Import font and global styles
+@use '../../Global/Global.scss' as global;
+
+// Vars
+$input-height: 40px;
+$button-height: 45px;
+$card-width: 400px;
+$padding: 2.5rem;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+* {
+  @include global.reset-styles;
+}
+
+.LoginSA-container {
+  @include global.flex-main();
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
+.LoginSA-card {
+  @include global.workspace-containers();
+  width: $card-width;
+  border-radius: 12px;
+  box-shadow: $box-shadow;
+  text-align: center;
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .left-icon {
+      position: absolute;
+      left: 0;
+      font-size: 1.25rem;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      .title {
+        text-align: center;
+        margin-top: 0;
+      }
+    }
+  }
+
+  Form {
+    margin-top: 24px;
+
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+
+    .ant-form-item:last-child {
+      margin-top: 32px;
+    }
+
+    .ant-form-item-explain {
+      text-align: left;
+    }
+  }
+
+  .ant-typography {
+    margin-bottom: 0 !important;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .LoginSA-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .top .left-icon {
+    font-size: 1.15rem;
+  }
+
+  Form {
+    .ant-form-item {
+      label {
+        font-size: 0.9rem;
+      }
+      input {
+        font-size: 0.9rem;
+      }
+    }
+
+    button {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .LoginSA-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .top {
+    flex-direction: column;
+
+    .center {
+      gap: 6px;
+    }
+  }
+
+  Form {
+    .ant-form-item {
+      margin-bottom: 12px;
+
+      label {
+        font-size: 0.85rem;
+      }
+
+      input {
+        font-size: 0.85rem;
+      }
+    }
+
+    button {
+      font-size: 0.85rem;
+    }
+  }
+}

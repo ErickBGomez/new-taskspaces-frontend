@@ -1,0 +1,25 @@
+.app-content {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  transition: margin-left 0.5s ease;
+
+  .header-container {
+    width: 100%;
+    transition: width 0.5s ease;
+  }
+
+  &.sidebar-active {
+    margin-left: 275px;
+
+    .header-container {
+      width: calc(100% - 275px);
+    }
+  }
+
+  .content {
+    flex: 1;
+    margin-top: 96px;
+  }
+}

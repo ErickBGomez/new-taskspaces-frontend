@@ -1,0 +1,16 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.inspiration {
+  @include global.workspace-containers();
+  .inspiration-title {
+    @include global.workspace-titles();
+    .ant-typography {
+      @include global.workspace-titles();
+      margin-bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import './components/Global/Global.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white-color;
+}

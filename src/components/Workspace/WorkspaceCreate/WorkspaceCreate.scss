@@ -1,0 +1,51 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.workspace-create {
+  @include global.container();
+  @include global.flex-main();
+  min-height: 495px;
+
+  .workspace-create-container {
+    max-width: 405px;
+    width: 100%;
+
+    @include global.flex-main(24px);
+    .workspace-create-title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        margin-bottom: 24px;
+      }
+    }
+
+    .workspace-create-form {
+      @include global.flex-main(16px);
+      width: 100%;
+
+      .ant-typography {
+        margin-bottom: 0px;
+      }
+    }
+
+    .workspace-create-title-form {
+      width: 100%;
+
+      .workspace-create-title-button {
+        padding-top: 16px;
+        display: flex;
+        gap: 48px;
+        .ant-btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

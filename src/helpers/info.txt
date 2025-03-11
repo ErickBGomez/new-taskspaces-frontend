@@ -1,0 +1,1 @@
+Funciones de JavaScript que puedan servir para la logica de algun componente y/o algun otro proceso adicional, pueden ir con la extension .js o .jsx

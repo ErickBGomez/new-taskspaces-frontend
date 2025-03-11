@@ -1,0 +1,65 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.project-settings {
+  background-color: global.$white-color;
+  @include global.flex-main();
+  @include global.container();
+  .project-settings-container {
+    @include global.settings-container();
+    .project-settings-title {
+      @include global.flex-main();
+      .project-settings-title-general .ant-typography {
+        @include global.settings-title-general();
+      }
+      .project-settings-title-type .ant-typography {
+        margin-bottom: 0px;
+      }
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 32px;
+      .save-button {
+        .ant-btn {
+          width: 140px;
+        }
+      }
+      .cancel-button {
+        .ant-btn {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+.input-group {
+  display: flex;
+  justify-content: stretch;
+  padding-bottom: 16px;
+  gap: 4px;
+}
+
+.input-group-button {
+  .ant-btn {
+    width: 100%;
+  }
+}
+
+.ant-select-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.ant-form-item {
+  margin-bottom: 0px;
+}

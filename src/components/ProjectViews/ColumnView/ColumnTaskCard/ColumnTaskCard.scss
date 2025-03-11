@@ -1,0 +1,52 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.taskcard-container {
+  @include global.container();
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  border-radius: 16px;
+  background-color: global.$primary-color_25;
+  gap: 8px;
+  .taskcard-title {
+    .ant-typography {
+      margin-bottom: 0px;
+    }
+  }
+  .taskcard-tags {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .taskcard-collaborators {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    .ant-image {
+      margin: 0px;
+    }
+
+    .ant-avatar {
+      position: absolute;
+      object-fit: cover;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid global.$primary-color;
+      right: 10px;
+    }
+  }
+  cursor: pointer;
+}

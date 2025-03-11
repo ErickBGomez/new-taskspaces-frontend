@@ -1,0 +1,64 @@
+@use '../Global/Global.scss' as global;
+
+// Vars
+$card-width: 450px;
+$padding: 2.5rem;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+* {
+  @include global.reset-styles;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.login-card {
+  background-color: global.$white-color;
+  width: $card-width;
+  display: flex;
+  flex-direction: column;
+  padding: $padding 0;
+
+  .title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .ant-form-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.submit {
+  margin: 16px 0 0 0;
+}
+
+.google-login {
+  margin-bottom: 24px;
+}
+
+.ant-divider-inner-text {
+  font-size: 16px;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .login-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,53 @@
+@use '../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.project-header {
+  @include global.container();
+  display: flex;
+  justify-content: space-between;
+  .project-header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    .project-header-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      .project-header-icon {
+        padding: 8px;
+        background-color: global.$primary-color_50;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .project-header-name .ant-typography {
+        margin-bottom: 0px;
+      }
+    }
+    .project-header-views {
+      .ant-tabs-nav-list {
+        padding-top: 8px;
+      }
+    }
+  }
+  .project-header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .settings-button .ant-btn-variant-text {
+      @include global.icon-button();
+    }
+  }
+}

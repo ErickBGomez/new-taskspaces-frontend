@@ -1,0 +1,20 @@
+@use '../Global/Global.scss' as global;
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  .timer {
+    border: 1px solid global.$black-color_25;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .icon {
+      color: global.$black-color_25;
+    }
+  }
+}

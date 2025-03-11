@@ -1,0 +1,30 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.columnstatus-container {
+  @include global.container();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  max-width: max-content;
+  border-radius: 16px;
+  .columnstatus-list {
+    max-width: 300px;
+    width: 100%;
+  }
+  .columnstatus-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: fit-content;
+  }
+}

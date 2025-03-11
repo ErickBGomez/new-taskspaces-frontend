@@ -1,0 +1,20 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.collaborators {
+  @include global.workspace-containers();
+  .collaborators-title {
+    @include global.workspace-titles();
+    .ant-typography {
+      margin-bottom: 0px;
+      @include global.workspace-titles();
+    }
+  }
+  .collaborators-carousel-main {
+    max-width: 750px;
+    width: 100%;
+  }
+}

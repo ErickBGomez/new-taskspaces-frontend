@@ -1,0 +1,52 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.calendar-task {
+  padding: 8px;
+  border-radius: 8px;
+  height: fit-content;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: global.$primary-color_25;
+  .task-title {
+    .ant-typography {
+      margin-bottom: 0px;
+      font-size: 12px;
+    }
+  }
+  .task-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    .tag-indicator {
+      width: 24px;
+      height: 8px;
+      border-radius: 8px;
+    }
+  }
+  .task-collaborators {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-left: 8px;
+    .ant-image {
+      @include global.image-settings(20px);
+      position: relative;
+      margin-left: -8px;
+      img {
+        border-color: global.$primary-color;
+      }
+    }
+  }
+}

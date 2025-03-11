@@ -1,0 +1,50 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.benefits {
+  padding: 80px;
+  background-color: global.$black-color_5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .benefits-container {
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .benefits-cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .benefit {
+        background-color: global.$white-color;
+        padding: 16px;
+        border: 1px solid global.$black-color_25;
+        border-radius: 16px;
+        max-width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          .ant-typography {
+            text-align: center;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+}

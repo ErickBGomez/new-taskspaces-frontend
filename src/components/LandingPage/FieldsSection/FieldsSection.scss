@@ -1,0 +1,41 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.fields {
+  padding: 80px;
+  background-color: global.$black-color_5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fields-container {
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    .fields-container-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      .ant-typography {
+        margin-bottom: 0px;
+      }
+    }
+    .fields-container-info {
+      padding-top: 32px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .fields-content {
+        max-width: 300px;
+      }
+    }
+  }
+}

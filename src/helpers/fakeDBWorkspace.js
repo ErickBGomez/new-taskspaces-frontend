@@ -1,0 +1,235 @@
+export const tags = [
+  { id: 1, label: 'Urgent', color: '#F4933E' },
+  { id: 2, label: 'Follow-up', color: '#62A43A' },
+  { id: 3, label: 'Review', color: '#0000FF' },
+];
+
+export const projects = [
+  {
+    project: 'Project1',
+    icon: '🚀',
+    tasks: [
+      {
+        title: 'Setup environment',
+        status: 'pending',
+        due: '2024-11-12',
+        tags: [1],
+        bookmark: true,
+        collaborators: [1, 2],
+      },
+      {
+        title: 'Implement feature X',
+        status: 'doing',
+        due: '2024-11-14',
+        tags: [2],
+        bookmark: false,
+        collaborators: [2, 3],
+      },
+      {
+        title: 'Code review',
+        status: 'done',
+        due: '2024-11-15',
+        tags: [3],
+        bookmark: true,
+        collaborators: [4, 5],
+      },
+    ],
+  },
+  {
+    project: 'Project2',
+    icon: '🌟',
+    tasks: [
+      {
+        title: 'Design database',
+        status: 'pending',
+        due: '2024-11-18',
+        tags: [1, 2, 3],
+        bookmark: false,
+        collaborators: [1, 2, 3],
+      },
+      {
+        title: 'Create API endpoints',
+        status: 'doing',
+        due: '2024-11-19',
+        tags: [1],
+        bookmark: false,
+        collaborators: [5, 1],
+      },
+      {
+        title: 'Testing and QA',
+        status: 'done',
+        due: '2024-11-20',
+        tags: [1, 3],
+        bookmark: true,
+        collaborators: [2, 5],
+      },
+    ],
+  },
+  {
+    project: 'Project3',
+    icon: '📚',
+    tasks: [
+      {
+        title: 'Research new tools',
+        status: 'pending',
+        due: '2024-11-21',
+        tags: [2],
+        bookmark: true,
+        collaborators: [1, 3],
+      },
+      {
+        title: 'Integrate frontend',
+        status: 'doing',
+        due: '2024-11-22',
+        tags: [3, 1],
+        bookmark: false,
+        collaborators: [1, 2, 3],
+      },
+      {
+        title: 'Deploy to production',
+        status: 'done',
+        due: '2024-11-23',
+        tags: [3],
+        bookmark: false,
+        collaborators: [5, 4],
+      },
+    ],
+  },
+  {
+    project: 'Project4',
+    icon: '💻',
+    tasks: [
+      {
+        title: 'Setup CI/CD',
+        status: 'pending',
+        due: '2024-11-25',
+        tags: [1],
+        bookmark: false,
+        collaborators: [1, 3],
+      },
+      {
+        title: 'Create new UI components',
+        status: 'doing',
+        due: '2024-11-26',
+        tags: [2],
+        bookmark: false,
+        collaborators: [3, 4, 5],
+      },
+      {
+        title: 'Refactor codebase',
+        status: 'done',
+        due: '2024-11-27',
+        tags: [3],
+        bookmark: false,
+        collaborators: [1, 3],
+      },
+    ],
+  },
+  {
+    project: 'Project5',
+    icon: '🎨',
+    tasks: [
+      {
+        title: 'Write documentation',
+        status: 'pending',
+        due: '2024-11-28',
+        tags: [2],
+        bookmark: false,
+        collaborators: [2, 5],
+      },
+      {
+        title: 'User testing',
+        status: 'doing',
+        due: '2024-11-29',
+        tags: [1],
+        bookmark: false,
+        collaborators: [2, 4],
+      },
+      {
+        title: 'Release v2.0',
+        status: 'done',
+        due: '2024-12-01',
+        tags: [3],
+        bookmark: false,
+        collaborators: [5, 3],
+      },
+    ],
+  },
+  {
+    project: 'Project6',
+    icon: '🔧',
+    tasks: [
+      {
+        title: 'Team meeting',
+        status: 'pending',
+        due: '2024-12-05',
+        tags: [2],
+        bookmark: false,
+        collaborators: [1, 4],
+      },
+      {
+        title: 'Update dependencies',
+        status: 'doing',
+        due: '2024-12-06',
+        tags: [1],
+        bookmark: false,
+        collaborators: [2, 1],
+      },
+      {
+        title: 'Plan sprint',
+        status: 'done',
+        due: '2024-12-07',
+        tags: [3],
+        bookmark: false,
+        collaborators: [1, 4, 5],
+      },
+    ],
+  },
+  {
+    project: 'Project7',
+    icon: '🧠',
+    tasks: [
+      {
+        title: 'Initial setup',
+        status: 'pending',
+        due: '2024-12-10',
+        tags: [1],
+        bookmark: false,
+        collaborators: [1, 5],
+      },
+    ],
+  },
+];
+
+export const collaborators = [
+  {
+    id: 1,
+    username: 'ferlopez',
+    picture: '/src/assets/default-profile-picture.jpg',
+    type: 'owner',
+  },
+  {
+    id: 2,
+    username: 'johndoe',
+    picture: 'src/assets/default-profile-picture.jpg',
+    type: 'collaborator',
+  },
+  {
+    id: 3,
+    username: 'erickgomez',
+    picture: 'src/assets/default-profile-picture.jpg',
+    type: 'collaborator',
+  },
+  {
+    id: 4,
+    username: 'jonatanseg',
+    picture: 'src/assets/default-profile-picture.jpg',
+    type: 'collaborator',
+  },
+  {
+    id: 5,
+    username: 'janesmith',
+    picture: 'src/assets/default-profile-picture.jpg',
+    type: 'collaborator',
+  },
+];

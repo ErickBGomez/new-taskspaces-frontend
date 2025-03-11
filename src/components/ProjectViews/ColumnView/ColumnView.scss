@@ -1,0 +1,22 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.columnview {
+  .columnview-container {
+    @include global.container();
+    background-color: #1c1b1f;
+    min-height: 395px;
+    .columnview-columns {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}

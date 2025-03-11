@@ -1,0 +1,24 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.project-carousel-card {
+  cursor: pointer;
+  @include global.flex-main();
+  max-width: 80px;
+  width: 100%;
+  .project-carousel-card-box {
+    border-radius: 8px;
+    padding: 40px;
+    background-color: global.$primary-color_50;
+    .project-carousel-card-icon {
+      max-width: 32px;
+      width: 100%;
+    }
+  }
+  .project-carousel-card-title .ant-typography {
+    margin-bottom: 0px;
+  }
+}

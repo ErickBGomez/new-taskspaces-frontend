@@ -1,0 +1,1 @@
+Van las implementaciones de Context, como manejar tokens y otros recursos entre componentes

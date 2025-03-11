@@ -1,0 +1,162 @@
+@use '../Global/Global.scss' as global;
+
+$input-height: 40px;
+$button-height: 40px;
+$padding: 1rem 2rem;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+* {
+  @include global.reset-styles;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+  background-color: global.$white-color;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: $box-shadow;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .header-nav {
+      display: flex;
+      gap: 1.5rem;
+
+      .ant-btn {
+        padding-bottom: 10px;
+      } 
+
+      a {
+        color: global.$black-color;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: global.$primary-color;
+        }
+
+        &:active {
+          color: global.$active-color;
+        }
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .input-search {
+      width: 350px;
+      height: 32px;
+      border-radius: 6px;
+      color: global.$black-color_75;
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .user-avatar {
+      background-color: global.$black-color_50;
+      width: $button-height;
+      height: $button-height;
+      line-height: $button-height;
+      &:hover {
+        background-color: global.$primary-color_25;
+      }
+
+      &:active {
+        background-color: global.$primary-color_50;
+      }
+    }
+  }
+}
+
+.profile-dropdown {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+
+    .input-search {
+      width: 100%;
+    }
+
+    .header-buttons {
+      justify-content: space-between;
+
+      .login-button,
+      .register-button {
+        width: 100%;
+      }
+    }
+  }
+
+  .user-avatar {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .header-left,
+  .header-right {
+    gap: 0.5rem;
+  }
+
+  .input-search {
+    height: 36px;
+    font-size: 0.85rem;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+
+    .login-button,
+    .register-button {
+      height: 36px;
+      font-size: 0.85rem;
+    }
+  }
+
+  .user-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}

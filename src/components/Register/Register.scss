@@ -1,0 +1,77 @@
+@use '../Global/Global.scss' as global;
+
+// Vars
+$card-width: 450px;
+$padding: 2.5rem;
+
+* {
+  @include global.reset-styles;
+}
+
+.register-container {
+  @include global.workspace-containers();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  width: $card-width;
+  padding: $padding 0;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .ant-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+    .ant-form-item-explain {
+      text-align: left;
+    }
+  }
+
+  .button-container {
+    margin-top: 32px;
+  }
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .register-card {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .login-link {
+    font-size: 0.875rem;
+  }
+}

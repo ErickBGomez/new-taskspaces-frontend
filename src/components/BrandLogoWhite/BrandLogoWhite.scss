@@ -1,0 +1,21 @@
+@use '../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.company-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  img {
+    max-width: 64px;
+  }
+  span {
+    h1 {
+      color: global.$white-color;
+      font-size: 3rem;
+    }
+  }
+}

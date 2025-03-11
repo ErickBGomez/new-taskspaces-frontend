@@ -1,0 +1,21 @@
+@use '../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.task-status {
+  white-space: nowrap;
+  width: fit-content;
+  .ant-typography {
+    margin-bottom: 0px;
+  }
+  .task-status-p {
+    color: global.$black-color;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

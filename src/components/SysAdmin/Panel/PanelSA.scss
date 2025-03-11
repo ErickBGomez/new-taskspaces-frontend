@@ -1,0 +1,144 @@
+@use '../../Global/Global.scss' as global;
+
+// Vars
+$card-width: 500px;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+* {
+  @include global.reset-styles;
+}
+
+.panelSA-container {
+  @include global.flex-main();
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
+.panelSA-card {
+  @include global.workspace-containers();
+  width: $card-width;
+  box-shadow: $box-shadow;
+  text-align: center;
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .left-icon {
+      position: absolute;
+      left: 0;
+      font-size: 1.25rem;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      .title {
+        text-align: center;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .panelSA-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
+
+    .panelSA-option-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      border: 1px solid global.$black-color_25;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background-color: global.$black-color_5;
+      width: 100px;
+
+      &:hover {
+        box-shadow: $box-shadow;
+        transform: translateY(-3px);
+      }
+
+      .ant-avatar {
+        background-color: global.$black-color;
+        width: 45px;
+        height: 45px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.ant-typography {
+  margin-bottom: 0 !important;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-form-item-explain {
+  text-align: left !important;
+
+  .back-button {
+    .ant-btn-text {
+      font-size: 1.25rem;
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    .panelSA-card {
+      width: 90%;
+      padding: 1.5rem;
+    }
+
+    .panelSA-options {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .panelSA-option-item {
+      width: 85px;
+      padding: 1rem;
+
+      .ant-avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .panelSA-card {
+      width: 95%;
+      padding: 1rem;
+    }
+
+    .panelSA-options {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .panelSA-option-item {
+      width: 80px;
+      padding: 0.8rem;
+
+      .ant-avatar {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .ant-typography {
+      font-size: 0.9rem;
+    }
+  }
+}

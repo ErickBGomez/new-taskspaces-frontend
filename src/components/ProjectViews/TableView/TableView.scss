@@ -1,0 +1,66 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.table-view-container {
+  @include global.container();
+  min-height: 395px;
+
+  .add-new-task {
+    margin-bottom: 16px;
+  }
+
+  .table-view-header {
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: global.$white-color;
+    .ant-table {
+      width: 100%;
+    }
+    .ant-table-cell {
+      visibility: hidden;
+    }
+    .ant-table-thead .ant-table-cell {
+      visibility: visible;
+      background-color: global.$primary-color;
+      color: global.$white-color;
+    }
+    .ant-table-tbody {
+      display: none;
+    }
+    :where(.css-dev-only-do-not-override-40jnk4).ant-table-wrapper
+      .ant-table-container
+      table
+      > thead
+      > tr:first-child
+      > *:last-child {
+      border-bottom-right-radius: 8px;
+    }
+    :where(.css-dev-only-do-not-override-40jnk4).ant-table-wrapper
+      .ant-table-container
+      table
+      > thead
+      > tr:first-child
+      > *:first-child {
+      border-bottom-left-radius: 8px;
+    }
+    .table-header-column {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      .ant-typography {
+        color: global.$white-color;
+        margin-bottom: 0px;
+        display: flex;
+        gap: 8px;
+      }
+    }
+  }
+}

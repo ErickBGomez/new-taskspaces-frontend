@@ -1,0 +1,110 @@
+@use './Font.scss';
+
+$font-family: 'Outfit', sans-serif;
+
+// Purple
+$primary-color: #7a35db; // 100% opacidad
+$primary-color_75: #7a35dbbf; // 75% opacidad
+$primary-color_50: #7a35db80; // 50% opacidad
+$primary-color_25: #7a35db40; // 25% opacidad
+$active-color: #411c75;
+
+// Black
+$black-color: #21232b; // 100% opacidad
+$black-color_75: #21232bbf; // 75% opacidad
+$black-color_50: #21232b80; // 50% opacidad
+$black-color_25: #21232b40; // 25% opacidad
+$black-color_10: #21232b1a; // 10% opacidad
+$black-color_5: #21232b0d; // 5% opacidad
+
+// Others
+$danger-color: #ff4d4f;
+
+// White
+$white-color: #f7f8f8;
+
+@mixin reset-styles {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  font-family: $font-family;
+  // color: $black-color;
+  // font-size: 16px;
+}
+
+@mixin flex-main($gap: 8px, $flex-direction: column) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin container() {
+  padding: 32px;
+  background-color: $white-color;
+}
+
+@mixin nav-settings($gap: 8px) {
+  display: flex;
+  gap: $gap;
+  list-style: none;
+}
+
+@mixin workspace-titles() {
+  max-width: 750px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@mixin settings-title-general() {
+  font-size: 20px;
+  color: #c1c2c4;
+  margin-bottom: 0px;
+}
+
+@mixin workspace-containers() {
+  background-color: $white-color;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@mixin image-settings($width: 80px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    border: 3px solid $primary-color_50;
+    width: $width;
+    border-radius: 100%;
+  }
+}
+
+@mixin settings-container() {
+  max-width: 470px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+//.ant-btn-variant-text
+@mixin icon-button() {
+  &:hover {
+    background-color: $primary-color_25 !important;
+  }
+  &:active {
+    background-color: $primary-color_50 !important;
+  }
+}
+
+.ant-btn-variant-text {
+  @include icon-button();
+}

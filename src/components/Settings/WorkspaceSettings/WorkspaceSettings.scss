@@ -1,0 +1,90 @@
+@use '../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+//gap: 8px between titles
+//gap: 24px between title and content
+//padding: 32px between buttons and content
+//padding: 16px between inputs
+
+.workspace-settings {
+  @include global.container();
+  @include global.flex-main();
+  padding: 32px;
+  .workspace-settings-container {
+    @include global.settings-container();
+    .workspace-settings-title {
+      @include global.flex-main();
+      .workspace-settings-title-general .ant-typography {
+        @include global.settings-title-general();
+      }
+      .workspace-settings-title-type .ant-typography {
+        margin-bottom: 0px;
+      }
+    }
+    .collaborator-list {
+      height: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      .collaborators {
+        display: flex;
+        padding: 0px;
+      }
+      .add-collaborator {
+        display: flex;
+        justify-content: center;
+        border: 2px dashed global.$black-color_50;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+      }
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 32px;
+      .save-button {
+        .ant-btn {
+          width: 140px;
+        }
+      }
+      .cancel-button {
+        .ant-btn {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+.owner-info .ant-image,
+.collaborators .ant-image {
+  margin: 0px;
+  @include global.image-settings(60px);
+}
+
+.owner-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: stretch;
+  padding-bottom: 16px;
+  gap: 4px;
+}
+
+.settings-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

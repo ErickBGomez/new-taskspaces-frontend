@@ -1,0 +1,37 @@
+@use '../../../Global/Global.scss' as global;
+
+* {
+  @include global.reset-styles;
+}
+
+.collaborators-carousel-card {
+  @include global.flex-main();
+  max-width: 100px;
+  width: 100%;
+  .collaborators-carousel-card-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .collaborators-carousel-card-picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ant-image {
+        @include global.image-settings();
+      }
+    }
+  }
+  .collaborators-carousel-card-username .ant-typography {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+}
+
+.collaborators-carousel-card-username .role {
+  font-size: 14px;
+  color: global.$black-color_50;
+}
+
+.collaborators-carousel-card {
+  cursor: pointer;
+}
