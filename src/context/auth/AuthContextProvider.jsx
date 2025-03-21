@@ -1,8 +1,10 @@
+import { App } from 'antd';
 import { useState, useEffect } from 'react';
 import { AuthContext } from './AuthContext';
 import PropTypes from 'prop-types';
 
 const AuthContextProvider = ({ children }) => {
+  const { message } = App.useApp();
   const [user, setUser] = useState(() => {
     const storedUser =
       localStorage.getItem('user') || sessionStorage.getItem('user');
@@ -46,6 +48,10 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const logout = () => {
+    if (token) {
+      message.error('Your session has expired. Please log in again.');
+    }
+
     setUser(null);
     setToken('');
     setRememberMe(false);

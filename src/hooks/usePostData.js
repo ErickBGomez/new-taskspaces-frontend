@@ -26,7 +26,6 @@ const usePostData = (route, token = '') => {
 
       if (response.status === 401) {
         logout();
-        message.error('Your session has expired. Please log in again.');
         return;
       }
 
