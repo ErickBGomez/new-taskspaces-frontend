@@ -2,7 +2,12 @@ import { useCallback, useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import getHeaders from '../../helpers/api/header';
 
-const socket = io(import.meta.env.VITE_SOCKET_URL);
+// Connect to the socket server with token
+const socket = io(import.meta.env.VITE_SOCKET_URL, {
+  auth: {
+    token: localStorage.getItem('token') || sessionStorage.getItem('token'),
+  },
+});
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const useTasks = (projectId, token, initialTasks = []) => {
