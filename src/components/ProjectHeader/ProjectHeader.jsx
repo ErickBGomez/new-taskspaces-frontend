@@ -16,6 +16,7 @@ import { AuthContext } from '../../context/auth/AuthContext';
 import { TaskContext } from '../../context/task/TaskContext';
 import useFetchData from '../../hooks/useFetchData';
 import { useTasks } from '../../hooks/socketio/useTask';
+import SocketContext from '../../context/socket/SocketContext';
 
 const { Title } = Typography;
 
@@ -27,13 +28,18 @@ export default function ProjectHeader({ project }) {
   const { data, loading, error } = useFetchData(`tasks/p/${projectId}`, token);
   const { message } = App.useApp();
   const navigate = useNavigate();
+  const { socket } = useContext(SocketContext);
 
   // SocketIO
-  const { tasks, fetchTasks } = useTasks(projectId, token);
+  useEffect(() => {
+    socket.emit('task:fetchAll', projectId);
+  }, [socket, projectId]);
 
   useEffect(() => {
-    saveTasks(tasks);
-  }, [tasks, saveTasks]);
+    socket.on('task:fetchedAll', (tasks) => {
+      saveTasks(tasks);
+    });
+  }, [socket, saveTasks]);
 
   const tabItems = [
     {

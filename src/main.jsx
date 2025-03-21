@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import AuthContextProvider from './context/auth/AuthContextProvider.jsx';
 import TaskContextProvider from './context/task/TaskContextProvider.jsx';
 import SidebarContextProvider from './context/sidebar/SidebarContextProvider.jsx';
+import SocketContextProvider from './context/socket/SocketContextProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,7 +18,9 @@ createRoot(document.getElementById('root')).render(
           <AuthContextProvider>
             <SidebarContextProvider>
               <TaskContextProvider>
-                <App />
+                <SocketContextProvider>
+                  <App />
+                </SocketContextProvider>
               </TaskContextProvider>
             </SidebarContextProvider>
           </AuthContextProvider>
